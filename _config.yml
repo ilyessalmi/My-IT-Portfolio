@@ -1,6 +1,8 @@
 theme: jekyll-theme-cayman
 plugins:
   - jekyll-remote-theme
+
+# Page settings
 title: Ilyes Salmi | Cloud & IT Systems Administrator
 description: A portfolio of hands-on projects in Microsoft 365, Azure, and Windows Server.
 show_downloads: false

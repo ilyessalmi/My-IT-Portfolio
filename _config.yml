@@ -1,0 +1,10 @@
+# Sets the theme for your GitHub Pages site.
+theme: jekyll-theme-cayman
+
+# This plugin is required for the new GitHub Actions workflow to use themes.
+plugins:
+  - jekyll-remote-theme
+
+# The title and description that will appear at the top of your portfolio website.
+title: Ilyes's IT Professional Portfolio
+description: A collection of my hands-on technical projects and home lab work.

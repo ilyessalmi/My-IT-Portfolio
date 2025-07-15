@@ -52,3 +52,16 @@ The final layer focused on protecting the data itself.
 A key part of administration is diagnosing issues. To demonstrate this skill, I analyzed a failed sign-in attempt using the Entra ID Sign-in logs. The logs provided clear, actionable information, including the specific error code and failure reason, allowing for quick and accurate troubleshooting.
 
 ![Investigating a Failed Sign-in Log](screenshot-2-03-signin-log-failure.png)
+
+
+---
+## Summary of Skills Demonstrated
+
+This project showcases a multi-layered approach to security, demonstrating skills across identity, threat protection, and data governance:
+
+*   **Conditional Access & Zero Trust:** Designed and implemented multiple Conditional Access policies, which are the foundation of a modern Zero Trust security model.
+*   **Identity Security & MFA:** Enforced Multi-Factor Authentication across the tenant to protect against password-based attacks and configured Self-Service Password Reset (SSPR) to empower users.
+*   **Automated Threat Response:** Configured Identity Protection policies to automatically remediate user risk by forcing a secure password change in response to high-risk events.
+*   **Security Hardening:** Eliminated a major attack vector by creating a policy to explicitly block legacy authentication protocols that bypass modern security controls.
+*   **Data Loss Prevention (DLP):** Implemented and tested a Microsoft Purview DLP policy to detect and prevent the exfiltration of sensitive financial data via email and Teams.
+*   **Security Monitoring & Troubleshooting:** Utilized Entra ID sign-in logs to diagnose and investigate authentication failures, a core skill for any support or administration role.

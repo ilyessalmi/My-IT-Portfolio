@@ -97,10 +97,13 @@ To confirm the underlying mechanism of the identity link, I inspected the user o
 
 ![alt text](screenshot-03-consistency-guid.png)
 
+---
+## Summary of Skills Demonstrated
 
-### 6. Skills Demonstrated
-* Identity & Access Management: Deployed and managed Active Directory and Microsoft Entra ID.
-* Hybrid Cloud Integration: Configured and maintained Microsoft Entra ID Connect for identity synchronization.
-* IT Automation: Scripted user management tasks using PowerShell to improve efficiency and reduce manual error.
-* System Administration: Performed core administrative tasks including OU design, user onboarding, and domain client management.
-* Problem Solving: Understood and implemented a solution for a common business need: unifying user identities across on-premises and cloud platforms.
+This project showcases a range of critical skills required for modern IT administration roles:
+
+*   **Identity & Access Management:** Deployed and managed Active Directory and Microsoft Entra ID.
+*   **Hybrid Cloud Integration:** Configured and maintained Microsoft Entra ID Connect for identity synchronization.
+*   **IT Automation:** Scripted user management tasks using PowerShell to improve efficiency and reduce manual error.
+*   **System Administration:** Performed core administrative tasks including OU design, user onboarding, and domain client management.
+*   **Problem Solving:** Understood and implemented a solution for a common business need: unifying user identities across on-premises and cloud platforms.

@@ -3,6 +3,6 @@ plugins:
   - jekyll-remote-theme
 
 # Page settings
-title: Ilyes Salmi | Cloud & IT Systems Administrator
+title: Ilyes Salmi | IT Systems & Cloud Administrator
 description: A portfolio of hands-on projects in Microsoft 365, Azure, and Windows Server.
 show_downloads: false

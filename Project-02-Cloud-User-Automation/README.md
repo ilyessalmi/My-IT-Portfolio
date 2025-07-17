@@ -75,6 +75,7 @@ foreach ($user in $users) {
         Write-Host "Creating user: $displayName..."
         $newUser = New-MgUser @newUserParams
         Write-Host "Successfully created user $($newUser.UserPrincipalName). Temporary Password: $($passwordProfile.Password)" -ForegroundColor Green
+
         # Assign the E5 license to the new user
         Write-Host "Assigning E5 license to $($newUser.UserPrincipalName)..."
         Set-MgUserLicense -UserId $newUser.Id -AddLicenses @{SkuId = $licenseSku.SkuId } -RemoveLicenses @()
@@ -156,7 +157,7 @@ foreach ($user in $usersToOffboard) {
         # The "$_" variable automatically contains the error message.
         Write-Error "Failed to process user '$upn'. They might not exist or another error occurred. Details: $_"
     }
-    Write-Host "---" # Separator to make the output easy to read
+    Write-Host "---"
 }
 ```
 ![The offboarding script processing multiple users](screenshot-2-03-offboarding-in-action.png)

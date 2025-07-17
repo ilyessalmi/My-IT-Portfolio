@@ -1,4 +1,4 @@
-# Project 2: M365 Security & Compliance Baseline
+# Project 3: M365 Security & Compliance Baseline
 
 ## Project Overview
 

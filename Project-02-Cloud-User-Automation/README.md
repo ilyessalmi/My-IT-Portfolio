@@ -24,6 +24,68 @@ I developed a PowerShell script (`Onboard-CloudUsers.ps1`) to ingest a list of n
 
 The script's output provides a real-time audit trail of created users and their temporary passwords.
 
+```PowerShell
+# # This script onboards new cloud-only M365 users from a CSV file using Microsoft Graph API.
+
+# Connect to Microsoft Graph with the necessary permissions.
+Write-Host "Connecting to Microsoft Graph ..."
+Connect-MgGraph -Scopes "User.ReadWrite.All", "Directory.ReadWrite.All"
+
+# Find the main assignable license in this tenant.
+Write-Host "Finding the tenant's main user license..."
+$licenseSku = Get-MgSubscribedSku | Where-Object { $_.SkuPartNumber -eq "O365_w/o_Teams_Bundle_M5" }
+
+# A safety check. If we didn't find the license, we stop the script.
+if (-not $licenseSku) {
+    Write-Error "Could not find the specified license SKU (O365_w/o_Teams_Bundle_M5) in this tenant."
+    return
+}
+Write-Host "Found License SKU ID: $($licenseSku.SkuId)" -ForegroundColor Cyan
+
+# Import the user data from the CSV file.
+$users = Import-Csv -Path "C:\Temp\NewHires.csv"
+
+# Loop through each user in the CSV and create their account.
+foreach ($user in $users) {
+    # Construct the user's information
+    $displayName = "$($user.FirstName) $($user.LastName)"
+    $mailNickname = "$($user.FirstName.Substring(0,1))$($user.LastName)".ToLower()
+    $userPrincipalName = "$($mailNickname)@acces93.onmicrosoft.com"
+
+    # Define the user's password profile and forces the user to change their password on first login.
+    $passwordProfile = @{
+        ForceChangePasswordNextSignIn = $true
+        Password                      = ('P@ssw0rd' + (Get-Random -Minimum 1000 -Maximum 9999)) # Generate a temporary, random password
+    }
+
+    # Create the user object with all properties
+    $newUserParams = @{
+        AccountEnabled    = $true
+        DisplayName       = $displayName
+        UserPrincipalName = $userPrincipalName
+        MailNickname      = $mailNickname
+        GivenName         = $user.FirstName
+        Surname           = $user.LastName
+        Department        = $user.Department
+        UsageLocation     = "FR"
+        PasswordProfile   = $passwordProfile
+    }
+
+    try {
+        Write-Host "Creating user: $displayName..."
+        $newUser = New-MgUser @newUserParams
+        Write-Host "Successfully created user $($newUser.UserPrincipalName). Temporary Password: $($passwordProfile.Password)" -ForegroundColor Green
+        # Assign the E5 license to the new user
+        Write-Host "Assigning E5 license to $($newUser.UserPrincipalName)..."
+        Set-MgUserLicense -UserId $newUser.Id -AddLicenses @{SkuId = $licenseSku.SkuId } -RemoveLicenses @()
+        Write-Host "License assigned successfully." -ForegroundColor Green
+    }
+    catch {
+        Write-Error "Failed to create or license user $displayName. Error: $_"
+    }
+}
+```
+
 ![PowerShell script successfully creating users](screenshot-2-01-onboarding-in-action.png)
 
 The newly created users were immediately visible and correctly configured in the Microsoft 365 Admin Center, fully licensed and ready for work.
@@ -37,6 +99,66 @@ To handle departing employees, a second script (`Bulk-Offboard-Users.ps1`) was d
 2.  **License Reclamation:** The script first checks if the user has licenses, then removes all assigned licenses to free them up for new employees and ensure cost efficiency.
 3.  **Robust Error Handling:** The entire process for each user is wrapped in a `try/catch` block, allowing the script to report an error for one user (e.g., a typo in the CSV) and continue processing the rest of the list.
 
+```PowerShell
+This script securely offboards multiple cloud-only users from a CSV file.
+
+# Connect to Microsoft Graph with the necessary permissions.
+Write-Host "Connecting to Microsoft Graph..."
+Connect-MgGraph -Scopes "User.ReadWrite.All", "Directory.ReadWrite.All"
+
+# Import the list of departing employees.
+Write-Host "Importing users to offboard from CSV file..."
+$usersToOffboard = Import-Csv -Path "C:\Temp\DepartingUsers.csv"
+Write-Host "Found $($usersToOffboard.Count) users to process."
+Write-Host "---"
+
+# Loop through each user in the CSV and perform the secure offboarding process.
+foreach ($user in $usersToOffboard) {
+
+    # This is the UPN from our CSV file for the current user in the loop.
+    $upn = $user.UserPrincipalName
+
+    # This is the error handling block. PowerShell will TRY to run the code inside {}.
+    # If ANY command fails, it will immediately jump to the CATCH block.
+    try {
+        # Find the user in Microsoft Entra ID.
+        Write-Host "Processing user: $upn"
+        $userObject = Get-MgUser -UserId $upn -ErrorAction Stop
+
+        # Block their sign-in immediately using the correct BodyParameter format.
+        # Create a "body" package (a hashtable) containing the properties we want to change.
+        $userUpdate = @{
+            AccountEnabled = $false
+        }
+        # Now we call Update-MgUser and pass the entire package to the -BodyParameter.
+        Update-MgUser -UserId $userObject.Id -BodyParameter $userUpdate
+        Write-Host "  -> Sign-in for $($userObject.DisplayName) is now BLOCKED." -ForegroundColor Yellow
+
+        # Remove all assigned licenses to free them up and save costs.
+        Write-Host "  -> Checking for assigned licenses..."
+        if ($userObject.AssignedLicenses.Count -gt 0) {
+            # This code only runs IF the user has one or more licenses.
+            Write-Host "  -> Found $($userObject.AssignedLicenses.Count) license(s). Removing them..."
+            Set-MgUserLicense -UserId $userObject.Id -AddLicenses @() -RemoveLicenses $userObject.AssignedLicenses.SkuId
+            Write-Host "  -> All licenses removed." -ForegroundColor Yellow
+        }
+        else {
+            # This code runs if the user has no licenses.
+            Write-Host "  -> User has no licenses to remove." -ForegroundColor Green
+        }
+
+        # Provide info for the final deletion step.
+        Write-Host "  -> User is ready for deletion. To permanently delete, run:" -ForegroundColor Cyan
+        Write-Host "     Remove-MgUser -UserId '$($userObject.Id)'" -ForegroundColor Cyan
+    }
+    catch {
+        # This code only runs if something in the 'try' block failed.
+        # The "$_" variable automatically contains the error message.
+        Write-Error "Failed to process user '$upn'. They might not exist or another error occurred. Details: $_"
+    }
+    Write-Host "---" # Separator to make the output easy to read
+}
+```
 ![The offboarding script processing multiple users](screenshot-2-03-offboarding-in-action.png)
 
 ## 3. Real-World Troubleshooting

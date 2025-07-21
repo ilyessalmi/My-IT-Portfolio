@@ -18,4 +18,9 @@ Welcome! This portfolio showcases my hands-on technical projects and demonstrate
 *   **Objective:** To secure a Microsoft 365 tenant using a layered approach to protect identities, sign-ins, and sensitive data.
 *   **Skills Demonstrated:** Conditional Access, Multi-Factor Authentication (MFA), Identity Protection, Data Loss Prevention (DLP), Sign-in Log Analysis.
 
+
+### ➡️ [Project 4: Configuring a Secure Collaboration Environment](./Project-04-Collaboration-Environment/README.md)
+*   **Objective:** To create and secure a dedicated workspace using Microsoft Teams, Exchange, SharePoint, and Purview.
+*   **Skills Demonstrated:** Cross-Platform Administration, Security Policy, Mail Flow Rules, eDiscovery.
+
 ---

@@ -4,9 +4,9 @@ Welcome! This portfolio showcases my hands-on technical projects and demonstrate
 
 ## Completed Projects
 
-### ➡️ [Project 1: Hybrid Identity Configuration](./Project-01-Hybrid-Identity/README.md)
-*   **Objective:** To connect an on-premises Active Directory to Microsoft 365, enabling a single sign-on experience for users.
-*   **Skills Demonstrated:** Active Directory, Microsoft Entra ID, Entra ID Connect (PHS), PowerShell, Hyper-V, Domain Verification.
+### ➡️ [Project 1: On-Premises & Hybrid Cloud Infrastructure](./Project-01-Hybrid-Identity/README.md)
+*   **Objective:** To build a complete on-premises network from scratch using Windows Server (AD, DNS, DHCP, GPO, RRAS), and then integrate it into a hybrid cloud model with Microsoft Entra ID.
+*   **Skills Demonstrated:** Active Directory, DNS, DHCP, Group Policy, Microsoft Entra ID, Entra ID Connect (PHS), Hybrid Identity, PowerShell, Hyper-V, Systematic Troubleshooting.
 
 
 ### ➡️ [Project 2: Cloud-Native User Automation with Microsoft Graph](./Project-02-Cloud-User-Automation/README.md)

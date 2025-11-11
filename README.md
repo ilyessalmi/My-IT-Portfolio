@@ -4,11 +4,11 @@ Welcome! This portfolio showcases my hands-on technical projects and demonstrate
 
 ## Completed Projects
 
-### ➡️ [Project 1: On-Premises & Hybrid Cloud Infrastructure](./Project-01-Hybrid-Identity/README.md)
-*   **Objective:** To build a complete on-premises network from scratch using Windows Server (AD, DNS, DHCP, GPO, RRAS), and then integrate it into a hybrid cloud model with Microsoft Entra ID.
-*   **Skills Demonstrated:** Active Directory, DNS, DHCP, Group Policy, Microsoft Entra ID, Entra ID Connect (PHS), Hybrid Identity, PowerShell, Hyper-V, Systematic Troubleshooting.
+### ➡️ [Project 1: On-Premises & Modern Endpoint Management Infrastructure](./Project-01-Hybrid-Identity/README.md)
+*   **Objective:** To build a complete on-premises network (AD, DNS, DHCP, GPO, NAT), integrate it with the cloud (Entra ID), and implement modern device management for both Windows and Android devices using Microsoft Intune.
+*   **Skills Demonstrated:** Active Directory, Group Policy, Network Services, Hybrid Identity, Microsoft Intune (MDM), BYOD Management, Advanced Troubleshooting.
 
-
+    
 ### ➡️ [Project 2: Cloud-Native User Automation with Microsoft Graph](./Project-02-Cloud-User-Automation/README.md)
 *   **Objective:** To automate the complete user lifecycle (onboarding & offboarding) for cloud-native users using the modern Microsoft Graph PowerShell SDK.
 *   **Skills Demonstrated:** Microsoft Graph API, PowerShell 7, Identity Lifecycle Management, Advanced Troubleshooting, Error Handling, Scalable Scripting.

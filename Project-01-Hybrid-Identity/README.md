@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This foundational project simulates the design and deployment of a complete on-premises and hybrid cloud infrastructure for a small business, "Contoso Ltd." The project began with building a core on-premises network using Windows Server, including identity, network services, and centralized management. It concluded by integrating this traditional environment with the cloud using Microsoft Entra ID to enable a seamless single sign-on experience.
+This foundational project simulates the design and deployment of a complete on-premises and hybrid cloud infrastructure for a small business, "Contoso Ltd." The project began with building a core on-premises network using Windows Server, including identity, network services, and centralized management. It concluded by integrating this traditional environment with the cloud using Microsoft Entra ID and implementing modern endpoint management for both Windows and Android devices with Microsoft Intune.
 
 ## Technologies Used
 
@@ -10,6 +10,7 @@ This foundational project simulates the design and deployment of a complete on-p
 *   Active Directory Domain Services (AD DS)
 *   **DNS, DHCP, and Group Policy (GPO)**
 *   **Routing and Remote Access (RRAS) for NAT**
+*   **Microsoft Intune (Endpoint Manager)**
 *   Microsoft Entra ID
 *   Microsoft Entra ID Connect v2
 *   PowerShell 5.1
@@ -79,13 +80,45 @@ To confirm the identity link, I inspected the user object's attributes in Active
 ![ConsistencyGuid Attribute in Active Directory](screenshot-03-consistency-guid.png)
 
 ---
+## 4. Modern Endpoint Management with Microsoft Intune
+
+The final phase of the project was to bridge the gap between traditional and modern management by implementing Microsoft Intune for both corporate and personal devices.
+
+### A) Co-managing Corporate Windows Devices
+
+The goal was to enroll the on-premises, domain-joined `CLIENT01` into Intune to create a "co-managed" state. I configured Hybrid Entra Join, enabled automatic MDM enrollment in Intune, and created a GPO to enforce enrollment. The `dsregcmd /status` command confirmed the device was successfully Hybrid Joined.
+
+![Hybrid Join Status on CLIENT01](screenshot-1-05-hybrid-join-status.png)
+![MDM Enrollment GPO Configuration](screenshot-1-06-intune-enrollment-gpo.png)
+
+#### Advanced Troubleshooting & Root Cause Analysis
+Despite a successful Hybrid Join, the device failed to enroll in Intune. I began a systematic troubleshooting process:
+1.  Investigated the client's Event Viewer logs, which revealed an "MDM not configured" error.
+2.  Verified the user's Intune license and checked the Enrollment Platform Restrictions, which were all correct.
+3.  Used the CNAME Validation tool in the Intune portal for a deeper diagnosis.
+
+This final step revealed the root cause: **the tenant's default DNS CNAME records for Intune enrollment were missing.** This tenant-level provisioning issue was preventing the device from discovering the enrollment service. This diagnostic process demonstrates a systematic approach to resolving complex, multi-layered technical issues.
+
+![CNAME Validation Failure in Intune Portal](screenshot-1-07-cname-validation-failure.png)
+
+### B) Securing Personal (BYOD) Android Devices
+
+To demonstrate Bring-Your-Own-Device management, I successfully enrolled a personal Android phone, proving the Intune service was configured correctly.
+
+*   **Enrollment & Work Profile:** I configured Intune to allow personally owned Android Enterprise devices. The enrollment on the phone successfully created a **Work Profile**, which securely isolates all corporate data and managed applications inside an encrypted container.
+
+*   **Application Deployment:** I used Intune to approve Microsoft Teams, Viva and SharePoint in the Managed Google Play store and then assigned them as "Required" apps to my user group. These apps were automatically pushed to the device and installed directly into the secure Work Profile.
+
+![Required Apps Assigned to User Group in Intune](screenshot-1-09-intune-app-assignment.png)
+![Teams and SharePoint Deployed in the Android Work Profile](screenshot-1-10-android-work-profile.png)
+
+---
 ## Summary of Skills Demonstrated
 
-This project showcases a wide range of critical skills required for modern IT administration roles:
-
-*   **Full-Stack On-Premises Administration:** Deployed and managed the core trinity of network services: Active Directory for identity, DNS for name resolution, and DHCP for IP management.
-*   **Network Infrastructure:** Configured a server to act as a router and NAT gateway, demonstrating a strong understanding of core networking principles.
-*   **Centralized Client Management:** Utilized Group Policy Objects (GPO) to enforce settings and deploy resources to targeted users and computers.
-*   **Systematic Troubleshooting:** Successfully diagnosed and resolved a GPO application failure by verifying network paths and permissions, a critical real-world administrative skill.
-*   **Hybrid Cloud Integration:** Configured and maintained Microsoft Entra ID Connect to synchronize identities between an on-premises environment and the cloud.
+*   **Full-Stack Infrastructure:** Deployed and managed a complete on-premises and hybrid infrastructure, including AD, DNS, DHCP, GPO, and RRAS (NAT).
+*   **Modern Endpoint Management (MDM):** Configured and managed Microsoft Intune for both corporate (co-managed Windows) and personal (BYOD Android) devices.
+*   **Advanced Troubleshooting:** Demonstrated a systematic approach to diagnosing a complex Intune enrollment failure, using client logs and tenant-level diagnostics to identify a root cause related to DNS CNAME records.
+*   **Centralized & Cloud Policy Management:** Utilized both traditional Group Policy and modern Intune policies to manage devices.
+*   **Hybrid Cloud Integration:** Configured Microsoft Entra ID Connect to synchronize user and device identities to the cloud.
+*   **BYOD & Security:** Implemented a secure solution for personal devices using the Android Enterprise Work Profile and deployed managed applications from the cloud.
 *   **IT Automation:** Scripted user management tasks using PowerShell to improve efficiency and reduce manual error.

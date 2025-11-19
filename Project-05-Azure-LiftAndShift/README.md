@@ -74,4 +74,4 @@ The final phase was to apply high-level governance and cost management controls.
 
 *   **Cost Management:** Finally, I created a **Budget** in Azure Cost Management for the project's resource group. I configured an alert to automatically send an email to administrators if spending is forecasted to exceed 80% of the monthly budget, ensuring financial accountability.
 
-![Azure Budget and Alert](screenshot-5-11-Azure Budget and Alert.png)
+![Azure Budget and Alert](screenshot-5-11-Azure-Budget-and-Alert.png)

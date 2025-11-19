@@ -23,4 +23,7 @@ Welcome! This portfolio showcases my hands-on technical projects and demonstrate
 *   **Objective:** To create and secure a dedicated workspace using Microsoft Teams, Exchange, SharePoint, and Purview.
 *   **Skills Demonstrated:** Cross-Platform Administration, Security Policy, Mail Flow Rules, eDiscovery.
 
----
+
+### ➡️ [Project 5: Azure "Lift and Shift" Migration & Governance](./Project-05-Azure-LiftAndShift/README.md)
+*   **Objective:** To migrate an on-premises server to Azure IaaS, implementing a full lifecycle of deployment, security, resilience, and governance.
+*   **Skills Demonstrated:** Azure IaaS (VMs, Storage, Networking), Azure Backup, Azure Monitor, Defender for Cloud, Azure Policy, Cost Management.

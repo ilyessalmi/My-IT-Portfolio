@@ -1,8 +1,4 @@
 theme: jekyll-theme-cayman
-plugins:
-  - jekyll-remote-theme
-
-# Page settings
-title: Ilyes Salmi | IT Systems & Cloud Administrator
-description: A portfolio of hands-on projects in Microsoft 365, Azure, and Windows Server.
+title: Ilyes Salmi
+description: IT Systems & Cloud Administrator | Data-Driven Automation Specialist
 show_downloads: false

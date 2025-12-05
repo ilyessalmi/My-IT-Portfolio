@@ -1,28 +1,51 @@
-# Ilyes Salmi
-### IT Systems & Cloud Administrator | Data-Driven Automation Specialist
+<!-- HEADER / INTRO SECTION -->
+<table border="0">
+ <tr>
+    <td width="70%" valign="top">
+      <h2>Ilyes Salmi</h2>
+      <h3>IT Systems & Cloud Administrator | Data-Driven Automation Specialist</h3>
+      <br>
+      <p>
+        I am a resilient and technical IT professional with a unique dual background in <b>Cloud Infrastructure</b> and <b>Data Engineering</b>.
+      </p>
+      <p>
+        My journey began with hands-on IT support in Prague, managing Microsoft 365 for a growing business. Seeking to deepen my technical capabilities, I completed an intensive <b>Data Engineer Bootcamp (RNCP Level 7)</b>, where I built end-to-end ETL pipelines using <b>Python</b> and <b>SQL</b>. I have now converged these skills to specialize as a <b>Cloud & Systems Administrator</b>.
+      </p>
+      <p>
+        I distinguish myself from other admins by using my data coding background to create <b>efficient automation scripts</b>, perform <b>robust troubleshooting</b>, and handle complex <b>log analysis</b>.
+      </p>
+      <p>
+        📍 <b>Location:</b> Paris, France (Open to Remote/Hybrid)<br>
+        🗣 <b>Languages:</b> English (Advanced), French (Native), Arabic (Literary), Czech (Basic)<br>
+        🎯 <b>Focus:</b> Azure IaaS, Intune, M365 Administration, IT Automation
+      </p>
+      <!-- BUTTONS FOR LINKS -->
+      <p>
+        <a href="./Resume-Ilyes-Salmi.pdf">
+          <img src="https://img.shields.io/badge/Download_Resume-FF5722?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white" />
+        </a>
+        <a href="https://linkedin.com/in/ilyessalmi">
+          <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+        </a>
+        <a href="https://www.datacamp.com/portfolio/ilyessalmi">
+          <img src="https://img.shields.io/badge/DataCamp_Portfolio-03EF62?style=for-the-badge&logo=datacamp&logoColor=black" />
+        </a>
+        <a href="mailto:ccc.ccc@gmail.com">
+          <img src="https://img.shields.io/badge/Email_Me-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+        </a>
+      </p>
+    </td>
+    <td width="30%" valign="top" align="center">
+      <img src="profile.jpg" width="100%" style="border-radius: 50%; border: 2px solid #e1e4e8;">
+    </td>
+ </tr>
+</table>
 
----
+<br>
 
-<!-- ABOUT ME SECTION -->
-## 👨‍💻 About Me
-
-<img src="profile.jpg" align="right" width="150" style="border-radius: 50%;">
-
-I am a resilient and technical IT professional with a unique dual background in **Cloud Infrastructure** and **Data Engineering**. 
-
-My journey began with hands-on IT support in Prague, managing Microsoft 365 for a growing business. Seeking to deepen my technical capabilities, I completed an intensive **Data Engineer Bootcamp (RNCP Level 7)**, where I built end-to-end ETL pipelines using **Python** and **SQL**. I have now converged these skills to specialize as a **Cloud & Systems Administrator**.
-
-I distinguish myself from other admins by using my data coding background to create **efficient automation scripts**, perform **robust troubleshooting**, and handle complex **log analysis**.
-
-*   **Location:** Paris, France (Open to Remote/Hybrid)
-*   **Languages:** English (Advanced), French (Native/Fluent), Arabic (Literary), Czech (Basic)
-*   **Focus:** Azure IaaS, Intune, M365 Administration, IT Automation.
-
-<p align="left">
-  <a href="./Resume-Ilyes-Salmi.pdf"><b>📄 Download My Full Resume</b></a> | 
-  <a href="https://linkedin.com/in/ilyessalmi"><b>LinkedIn Profile</b></a> | 
-  <a href="https://www.datacamp.com/portfolio/ilyessalmi"><b>DataCamp Portfolio (Python/SQL)</b></a>
-</p>
+<!-- EDUCATION SECTION STARTS HERE -->
+## 🏆 Education & Certifications
+... (Keep the rest of your file from here down)
 
 ---
 

@@ -6,13 +6,15 @@
 <!-- ABOUT ME SECTION -->
 ## 👨‍💻 About Me
 
+## 👨‍💻 About Me
+
 <img src="profile.jpg" align="right" width="150" style="border-radius: 50%;">
 
 I am a resilient and technical IT professional with a unique dual background in **Cloud Infrastructure** and **Data Engineering**. 
 
-My journey began with hands-on IT support in Prague, managing Microsoft 365 for a growing business. Seeking to deepen my technical capabilities, I completed an intensive **Data Engineer Bootcamp (RNCP Level 7)**, mastering Python, SQL, and ETL pipelines. I have now converged these skills to specialize as a **Cloud & Systems Administrator**.
+My journey began with hands-on IT support in Prague, managing Microsoft 365 for a growing business. Seeking to deepen my technical capabilities, I completed an intensive **Data Engineer Bootcamp (RNCP Level 7)**, where I built end-to-end ETL pipelines using **Python** and **SQL**. I have now converged these skills to specialize as a **Cloud & Systems Administrator**.
 
-I distinguish myself from other admins by using my data coding background to create superior **automation scripts**, robust **PowerShell/Python workflows**, and deep **log analysis**.
+I distinguish myself from other admins by using my data coding background to create **efficient automation scripts**, perform **robust troubleshooting**, and handle complex **log analysis**.
 
 *   **Location:** Paris, France (Open to Remote/Hybrid)
 *   **Languages:** English (Advanced), French (Native/Fluent), Arabic (Literary), Czech (Basic)
@@ -20,22 +22,25 @@ I distinguish myself from other admins by using my data coding background to cre
 
 <p align="left">
   <a href="./Resume-Ilyes-Salmi.pdf"><b>📄 Download My Full Resume</b></a> | 
-  <a href="https://linkedin.com/in/YOUR-LINKEDIN-USER"><b>LinkedIn</b></a> | 
-  <a href="https://www.datacamp.com/portfolio/ilyessalmi"><b>DataCamp Portfolio</b></a>
+  <a href="https://linkedin.com/in/ilyessalmi"><b>LinkedIn Profile</b></a> | 
+  <a href="https://www.datacamp.com/portfolio/ilyessalmi"><b>DataCamp Portfolio (Python/SQL)</b></a>
 </p>
 
 ---
 
 <!-- CERTIFICATIONS SECTION -->
-## 🏆 Certifications
+## 🏆 Education & Certifications
 
-| **Badge** | **Certification** | **Status** |
-| :---: | :--- | :--- |
-| <img src="badge-az900.png" width="80"> | **Microsoft Azure Fundamentals (AZ-900)** | ✅ Earned |
-| <img src="badge-ms900.png" width="80"> | **Microsoft 365 Fundamentals (MS-900)** | ✅ Earned |
-| <img src="badge-google.png" width="80"> | **Google IT Support Professional** | ✅ Earned |
-| <img src="badge-coursera.png" width="80"> | **Microsoft Cloud Support Associate** | ✅ Earned |
-| *Pending* | *Microsoft Security, Compliance, and Identity (SC-900)* | ⏳ In Progress |
+| **Badge** | **Credential** | **Issuer** | **Status** |
+| :---: | :--- | :--- | :--- |
+| <img src="https://img.icons8.com/color/96/student-male--v1.png" width="80"> | **Data Engineer - RNCP Level 7 (Bac+5)** | Ecole PMN (Le Pont) | ✅ Earned |
+| <img src="badge-az900.png" width="80"> | **Azure Fundamentals (AZ-900)** | Microsoft | ✅ Earned |
+| <img src="badge-ms900.png" width="80"> | **Microsoft 365 Fundamentals (MS-900)** | Microsoft | ✅ Earned |
+| <img src="badge-google.png" width="80"> | **Google IT Support Professional** | Coursera | ✅ Earned |
+| <img src="badge-coursera.png" width="80"> | **Microsoft Cloud Support Associate** | Coursera | ✅ Earned |
+| *Pending* | *Security, Compliance, and Identity (SC-900)* | Microsoft | ⏳ In Progress |
+
+> *Note: My Data Engineering background (RNCP 7) provides me with advanced scripting (Python) and database (SQL) skills, allowing me to automate complex system administration tasks that go beyond standard GUI management.*
 
 ---
 

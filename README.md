@@ -139,16 +139,13 @@ Below are hands-on projects designed and deployed in my home lab, simulating ent
 ### 📫 Connect With Me
 
  <p>
-  <a href="./Resume-Ilyes-Salmi.pdf">
-          <img src="https://img.shields.io/badge/Download_Resume-FF5722?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white" />
-        </a>
-        <a href="https://linkedin.com/in/ilyessalmi">
+   <a href="https://linkedin.com/in/ilyessalmi">
           <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
-        </a>
-        <a href="https://www.datacamp.com/portfolio/ilyessalmi">
+   </a>
+   <a href="https://www.datacamp.com/portfolio/ilyessalmi">
           <img src="https://img.shields.io/badge/DataCamp_Portfolio-03EF62?style=for-the-badge&logo=datacamp&logoColor=black" />
-        </a>
-        <a href="mailto:ccc.ccc@gmail.com">
+   </a>
+   <a href="mailto:ccc.ccc@gmail.com">
           <img src="https://img.shields.io/badge/Email_Me-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
-        </a>
-      </p>
+   </a>
+ </p>

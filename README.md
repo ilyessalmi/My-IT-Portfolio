@@ -19,25 +19,8 @@
         🗣 <b>Languages:</b> English (Advanced), French (Native), Arabic (Literary), Czech (Basic)<br>
         🎯 <b>Focus:</b> Azure IaaS, Intune, M365 Administration, IT Automation
       </p>
-      <!-- BUTTONS FOR LINKS -->
-      <p>
-        <a href="./Resume-Ilyes-Salmi.pdf">
-          <img src="https://img.shields.io/badge/Download_Resume-FF5722?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white" />
-        </a>
-        <a href="https://linkedin.com/in/ilyessalmi">
-          <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
-        </a>
-        <a href="https://www.datacamp.com/portfolio/ilyessalmi">
-          <img src="https://img.shields.io/badge/DataCamp_Portfolio-03EF62?style=for-the-badge&logo=datacamp&logoColor=black" />
-        </a>
-        <a href="mailto:ccc.ccc@gmail.com">
-          <img src="https://img.shields.io/badge/Email_Me-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
-        </a>
-      </p>
-    </td>
-    <td width="30%" valign="top" align="center">
-      <img src="profile.jpg" width="100%" style="border-radius: 50%; border: 2px solid #e1e4e8;">
-    </td>
+      <!-- BUTTONS FOR LINKS --
+    </td>    
  </tr>
 </table>
 

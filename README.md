@@ -1,6 +1,6 @@
 # 📂 IT Infrastructure & Cloud Automation Portfolio
 
-Below are hands-on projects designed and deployed in my home lab, simulating enterprise environments **Azure**, **Microsoft365** and **Intune** 
+Below are hands-on projects designed and deployed in my home lab, simulating enterprise environments **Azure**, **Microsoft 365**, **Intune** 
 
 ### 📂 [Project 5: Azure "Lift and Shift" Migration & Governance](./Project-05-Azure-LiftAndShift/README.md)
 *   **Scenario:** Migrated a critical on-premises file server to Azure IaaS.
